@@ -1,0 +1,19 @@
+# Node
+node_modules/
+.env
+.env.test
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Vite
+.vite
+
+# Others
+__pycache__/

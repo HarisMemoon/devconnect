@@ -1,0 +1,21 @@
+[build]
+  publish = "dist"
+  command = "npm run build:prod"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production.environment]
+  VITE_API_URL = "https://your-api-domain.com/api"
+  VITE_APP_NAME = "DevConnect"
+  VITE_AI_ENABLED = "true"
+
+[context.deploy-preview.environment]
+  VITE_API_URL = "https://your-staging-api-domain.com/api"
+  VITE_APP_NAME = "DevConnect (Preview)"
+  VITE_AI_ENABLED = "false"
